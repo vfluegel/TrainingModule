@@ -1,6 +1,13 @@
 package luckygen
 
-import "math/rand"
+import (
+	"math/rand"
+	"time"
+)
+
+func init() {
+	rand.Seed(time.Now().UnixNano())
+}
 
 func RandomInt() int {
 	return rand.Int()
